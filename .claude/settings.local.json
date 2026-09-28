@@ -11,7 +11,8 @@
       "Bash(git add *)",
       "Bash(git commit -m 'Portfolio redesign Phase 2: Projects and Certifications showcase *)",
       "Bash(git commit -m 'Fix: Update page.tsx with Footer import *)",
-      "Bash(git commit -m 'Update settings *)"
+      "Bash(git commit -m 'Update settings *)",
+      "Bash(cp /tmp/claude/C--Users-PC-Documents-Saket-Personal-Github-Portflio/929a9e50-00a9-483b-8b7c-396e609239ed/images/1.png public/saket-photo.jpg)"
     ]
   }
 }
