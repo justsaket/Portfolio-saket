@@ -9,7 +9,9 @@
       "Bash(curl -s http://localhost:3000)",
       "Bash(git commit -m 'Portfolio redesign Phase 1: Core sections with premium interactions *)",
       "Bash(git add *)",
-      "Bash(git commit -m 'Portfolio redesign Phase 2: Projects and Certifications showcase *)"
+      "Bash(git commit -m 'Portfolio redesign Phase 2: Projects and Certifications showcase *)",
+      "Bash(git commit -m 'Fix: Update page.tsx with Footer import *)",
+      "Bash(git commit -m 'Update settings *)"
     ]
   }
 }
