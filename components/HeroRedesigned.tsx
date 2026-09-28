@@ -124,19 +124,6 @@ export default function HeroRedesigned() {
                 Let's Connect
               </a>
             </motion.div>
-              >
-                View Work
-                <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                </svg>
-              </a>
-              <a
-                href={`mailto:${profile.contact.email}`}
-                className="px-8 py-4 rounded-full border-2 border-[var(--c-accent)] text-[var(--c-accent)] font-semibold hover:bg-[var(--c-accent)]/10 transition"
-              >
-                Let's Connect
-              </a>
-            </motion.div>
 
             {/* Quick Links */}
             <motion.div
