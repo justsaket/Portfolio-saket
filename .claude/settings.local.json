@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git config *)",
+      "Bash(git commit -m 'Build premium portfolio website for Saket Dandekar *)",
+      "Bash(git push *)"
+    ]
+  }
+}
