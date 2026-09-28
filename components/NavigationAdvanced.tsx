@@ -66,22 +66,20 @@ export default function NavigationAdvanced() {
         initial={{ y: -100, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.6, delay: 0.5 }}
-        className={`fixed left-1/2 -translate-x-1/2 z-[100] transition-all duration-500 ${
-          isScrolled
-            ? 'top-4 w-auto'
-            : 'top-4 w-[95%] md:w-[92%]'
+        className={`fixed top-4 left-1/2 -translate-x-1/2 z-[100] transition-all duration-500 ${
+          isScrolled ? 'w-auto' : 'w-[90%] max-w-6xl'
         }`}
       >
-        <div className={`liquid-nav rounded-full px-6 py-3 shadow-lg transition-all duration-500 ${
+        <div className={`liquid-nav rounded-full px-4 md:px-6 py-3 shadow-lg transition-all duration-500 ${
           isScrolled ? 'backdrop-blur-xl bg-[var(--c-tile)]/90' : ''
         }`}>
-          <div className="flex items-center justify-between gap-8">
+          <div className="flex items-center justify-between gap-4 md:gap-6">
             {/* Logo */}
             <button
               onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-              className="flex items-center gap-2 text-xl font-black text-[var(--c-strong)] hover:text-[var(--c-accent)] transition"
+              className="flex items-center gap-2 text-lg md:text-xl font-black text-[var(--c-strong)] hover:text-[var(--c-accent)] transition whitespace-nowrap"
             >
-              <span className="text-2xl">SD</span>
+              <span className="text-xl md:text-2xl">SD</span>
             </button>
 
             {/* Desktop Nav Links */}
@@ -90,7 +88,7 @@ export default function NavigationAdvanced() {
                 <a
                   key={item.label}
                   href={item.href}
-                  className="relative px-4 py-2 text-sm font-medium text-[var(--c-text)] hover:text-[var(--c-accent)] transition group"
+                  className="relative px-3 py-2 text-sm font-medium text-[var(--c-text)] hover:text-[var(--c-accent)] transition group whitespace-nowrap"
                 >
                   {item.label}
                   <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-[var(--c-accent)] rounded-full group-hover:w-full transition-all duration-300" />
@@ -99,17 +97,17 @@ export default function NavigationAdvanced() {
             </nav>
 
             {/* Right Actions */}
-            <div className="flex items-center gap-3">
+            <div className="flex items-center gap-2 md:gap-3">
               {/* Command Palette Trigger */}
               <button
                 onClick={() => setCommandPaletteOpen(true)}
-                className="hidden md:flex items-center gap-2 px-4 py-2 rounded-full bg-[var(--c-tile)] border border-[var(--c-border)] text-sm text-[var(--c-muted)] hover:border-[var(--c-accent)] hover:text-[var(--c-accent)] transition"
+                className="hidden md:flex items-center gap-2 px-3 md:px-4 py-2 rounded-full bg-[var(--c-tile)] border border-[var(--c-border)] text-xs md:text-sm text-[var(--c-muted)] hover:border-[var(--c-accent)] hover:text-[var(--c-accent)] transition whitespace-nowrap"
               >
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
                 </svg>
                 <span className="hidden xl:inline">Search</span>
-                <kbd className="hidden xl:inline px-2 py-0.5 text-xs bg-[var(--c-bg)] rounded border border-[var(--c-border)]">
+                <kbd className="hidden xl:inline px-1.5 py-0.5 text-xs bg-[var(--c-bg)] rounded border border-[var(--c-border)]">
                   ⌘K
                 </kbd>
               </button>
@@ -118,7 +116,7 @@ export default function NavigationAdvanced() {
               <a
                 href="/Resume.pdf"
                 download
-                className="hidden md:inline-block px-6 py-2 rounded-full bg-gradient-to-r from-[var(--c-accent)] to-[var(--c-accent2)] text-black text-sm font-semibold hover:opacity-90 transition"
+                className="hidden md:inline-block px-4 md:px-6 py-2 rounded-full bg-gradient-to-r from-[var(--c-accent)] to-[var(--c-accent2)] text-black text-xs md:text-sm font-semibold hover:opacity-90 transition whitespace-nowrap"
               >
                 Resume
               </a>
@@ -126,7 +124,7 @@ export default function NavigationAdvanced() {
               {/* Mobile Menu Toggle */}
               <button
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-                className="lg:hidden text-[var(--c-strong)]"
+                className="lg:hidden text-[var(--c-strong)] p-2"
                 aria-label="Menu"
               >
                 <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
