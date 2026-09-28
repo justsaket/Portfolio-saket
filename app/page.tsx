@@ -10,7 +10,8 @@ import AutomationSuite from '@/components/AutomationSuite';
 import ExperienceRedesigned from '@/components/ExperienceRedesigned';
 import ProjectsRedesigned from '@/components/ProjectsRedesigned';
 import CertificationsShowcase from '@/components/CertificationsShowcase';
-import Contact from '@/components/Contact';
+import ContactRedesigned from '@/components/ContactRedesigned';
+import Footer from '@/components/Footer';
 
 export default function Home() {
   return (
@@ -28,8 +29,9 @@ export default function Home() {
         <ProjectsRedesigned />
         <ExperienceRedesigned />
         <CertificationsShowcase />
-        <Contact />
+        <ContactRedesigned />
       </main>
+      <Footer />
     </>
   );
 }
