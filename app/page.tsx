@@ -8,7 +8,8 @@ import MarketingSuite from '@/components/MarketingSuite';
 import AnalyticsSuite from '@/components/AnalyticsSuite';
 import AutomationSuite from '@/components/AutomationSuite';
 import ExperienceRedesigned from '@/components/ExperienceRedesigned';
-import Projects from '@/components/Projects';
+import ProjectsRedesigned from '@/components/ProjectsRedesigned';
+import CertificationsShowcase from '@/components/CertificationsShowcase';
 import Contact from '@/components/Contact';
 
 export default function Home() {
@@ -24,8 +25,9 @@ export default function Home() {
         <MarketingSuite />
         <AnalyticsSuite />
         <AutomationSuite />
-        <Projects />
+        <ProjectsRedesigned />
         <ExperienceRedesigned />
+        <CertificationsShowcase />
         <Contact />
       </main>
     </>
