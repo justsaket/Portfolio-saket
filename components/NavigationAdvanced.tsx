@@ -51,10 +51,10 @@ export default function NavigationAdvanced() {
         }`}
       >
         <div className="container mx-auto px-6">
-          <div className="grid grid-cols-[auto_1fr_auto] items-center gap-8 h-20">
+          <div className="relative flex items-center justify-between h-20">
 
             {/* LEFT ZONE: Logo & Status */}
-            <div className="flex items-center gap-4">
+            <div className="flex items-center gap-4 flex-shrink-0">
               <button
                 onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
                 className="flex items-center gap-3 group"
@@ -79,9 +79,9 @@ export default function NavigationAdvanced() {
               </div>
             </div>
 
-            {/* CENTER ZONE: Main Navigation - TRULY CENTERED */}
-            <nav className="hidden lg:flex justify-center">
-              <div className="flex items-center gap-1 px-2 py-2 rounded-full bg-[var(--c-bg-card)]/50 border border-[var(--c-border)] backdrop-blur-sm">
+            {/* CENTER ZONE: Main Navigation - ABSOLUTE CENTER */}
+            <nav className="hidden lg:flex absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
+              <div className="flex items-center gap-1 px-3 py-2 rounded-full bg-[var(--c-bg-card)]/80 border border-[var(--c-border)] backdrop-blur-md shadow-lg">
                 {mainNavItems.map((item, index) => (
                   <motion.a
                     key={item.label}
@@ -102,7 +102,7 @@ export default function NavigationAdvanced() {
             </nav>
 
             {/* RIGHT ZONE: Actions */}
-            <div className="flex items-center gap-3">
+            <div className="flex items-center gap-3 flex-shrink-0">
               <a
                 href="/Resume.pdf"
                 download
