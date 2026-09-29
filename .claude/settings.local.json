@@ -14,7 +14,13 @@
       "Bash(git commit -m 'Update settings *)",
       "Bash(cp /tmp/claude/C--Users-PC-Documents-Saket-Personal-Github-Portflio/929a9e50-00a9-483b-8b7c-396e609239ed/images/1.png public/saket-photo.jpg)",
       "Bash(git commit -m 'Fix navigation centering and improve hero CTAs *)",
-      "Bash(git commit -m 'Fix Hero CTA duplication and syntax errors *)"
+      "Bash(git commit -m 'Fix Hero CTA duplication and syntax errors *)",
+      "Bash(cd /tmp)",
+      "Bash(unzip -q \"C:\\\\Users\\\\PC\\\\Downloads\\\\Portfolio - saket-20260929T061140Z-1-001.zip\" -d portfolio-assets)",
+      "Read(//tmp/**)",
+      "Read(//c/Users/PC/Downloads/**)",
+      "Bash(cp -r \"/tmp/portfolio-assets/Portfolio - saket/Logo Designs\" public/creative/branding/)",
+      "Bash(cp -r \"/tmp/portfolio-assets/Portfolio - saket/Brochure\" public/creative/branding/)"
     ]
   }
 }

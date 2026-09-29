@@ -177,12 +177,15 @@ export default function HeroRedesigned() {
                 <div className="w-full h-full rounded-3xl bg-[var(--c-bg)] overflow-hidden">
                   <Image
                     src="/saket-photo.jpg"
-                    alt="Saket Dandekar"
-                    width={600}
-                    height={800}
+                    alt="Saket Dandekar - Digital Marketing & Growth Analyst"
+                    width={800}
+                    height={1000}
                     priority
-                    className="w-full h-full object-cover"
+                    quality={95}
+                    sizes="(max-width: 768px) 90vw, (max-width: 1200px) 50vw, 600px"
+                    className="w-full h-full object-cover object-center"
                     style={{
+                      objectPosition: 'center center',
                       maskImage: 'linear-gradient(to bottom, black 70%, transparent 100%)',
                       WebkitMaskImage: 'linear-gradient(to bottom, black 70%, transparent 100%)',
                     }}

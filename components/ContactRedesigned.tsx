@@ -11,26 +11,49 @@ export default function ContactRedesigned() {
     name: '',
     email: '',
     subject: '',
-    message: ''
+    message: '',
+    website: '' // Honeypot field
   });
   const [status, setStatus] = useState<'idle' | 'sending' | 'success' | 'error'>('idle');
+  const [errorMessage, setErrorMessage] = useState('');
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setStatus('sending');
+    setErrorMessage('');
 
-    // Simulate form submission (replace with actual implementation)
-    setTimeout(() => {
-      // Fallback to mailto
-      const mailtoLink = `mailto:${profile.contact.email}?subject=${encodeURIComponent(formState.subject)}&body=${encodeURIComponent(`From: ${formState.name} (${formState.email})\n\n${formState.message}`)}`;
-      window.location.href = mailtoLink;
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          name: formState.name,
+          email: formState.email,
+          subject: formState.subject,
+          message: formState.message,
+          website: formState.website // Honeypot
+        }),
+      });
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(data.error || 'Failed to send message');
+      }
+
       setStatus('success');
-
       setTimeout(() => {
-        setFormState({ name: '', email: '', subject: '', message: '' });
+        setFormState({ name: '', email: '', subject: '', message: '', website: '' });
         setStatus('idle');
-      }, 3000);
-    }, 1000);
+      }, 5000);
+
+    } catch (error) {
+      console.error('Form submission error:', error);
+      setStatus('error');
+      setErrorMessage(error instanceof Error ? error.message : 'Failed to send message. Please try emailing directly.');
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -175,6 +198,18 @@ export default function ContactRedesigned() {
             transition={{ duration: 0.6, delay: 0.4 }}
           >
             <form onSubmit={handleSubmit} className="glass-hover rounded-2xl p-8 space-y-6">
+              {/* Honeypot field - hidden from users */}
+              <input
+                type="text"
+                name="website"
+                value={formState.website}
+                onChange={handleChange}
+                tabIndex={-1}
+                autoComplete="off"
+                style={{ position: 'absolute', left: '-9999px', width: '1px', height: '1px' }}
+                aria-hidden="true"
+              />
+
               <div>
                 <label htmlFor="name" className="block text-sm font-medium text-[var(--c-text)] mb-2">
                   Name *
@@ -186,6 +221,7 @@ export default function ContactRedesigned() {
                   value={formState.name}
                   onChange={handleChange}
                   required
+                  maxLength={100}
                   className="w-full px-4 py-3 rounded-lg bg-[var(--c-bg)] border border-[var(--c-border)] text-[var(--c-text)] placeholder:text-[var(--c-muted)] focus:outline-none focus:ring-2 focus:ring-[var(--c-accent)] focus:border-transparent transition"
                   placeholder="Your name"
                 />
@@ -202,6 +238,7 @@ export default function ContactRedesigned() {
                   value={formState.email}
                   onChange={handleChange}
                   required
+                  maxLength={100}
                   className="w-full px-4 py-3 rounded-lg bg-[var(--c-bg)] border border-[var(--c-border)] text-[var(--c-text)] placeholder:text-[var(--c-muted)] focus:outline-none focus:ring-2 focus:ring-[var(--c-accent)] focus:border-transparent transition"
                   placeholder="your.email@example.com"
                 />
@@ -218,6 +255,7 @@ export default function ContactRedesigned() {
                   value={formState.subject}
                   onChange={handleChange}
                   required
+                  maxLength={200}
                   className="w-full px-4 py-3 rounded-lg bg-[var(--c-bg)] border border-[var(--c-border)] text-[var(--c-text)] placeholder:text-[var(--c-muted)] focus:outline-none focus:ring-2 focus:ring-[var(--c-accent)] focus:border-transparent transition"
                   placeholder="What's this about?"
                 />
@@ -233,6 +271,7 @@ export default function ContactRedesigned() {
                   value={formState.message}
                   onChange={handleChange}
                   required
+                  maxLength={5000}
                   rows={6}
                   className="w-full px-4 py-3 rounded-lg bg-[var(--c-bg)] border border-[var(--c-border)] text-[var(--c-text)] placeholder:text-[var(--c-muted)] focus:outline-none focus:ring-2 focus:ring-[var(--c-accent)] focus:border-transparent transition resize-none"
                   placeholder="Your message..."
@@ -285,7 +324,7 @@ export default function ContactRedesigned() {
                   animate={{ opacity: 1, y: 0 }}
                   className="text-sm text-center text-red-500"
                 >
-                  Something went wrong. Please try again or email directly.
+                  {errorMessage || 'Something went wrong. Please try again or email directly.'}
                 </motion.p>
               )}
             </form>

@@ -27,7 +27,7 @@ export default function CreativeGallery() {
             Creative <span className="text-gradient">Portfolio</span>
           </h2>
           <p className="text-xl text-[var(--c-muted)] max-w-3xl mx-auto mb-8">
-            Brand identity, packaging, social media creatives, advertising campaigns, and visual communication work.
+            Brand identity, packaging, social media creatives, advertising campaigns, and visual communication work. Over 160+ creative projects across multiple categories.
           </p>
 
           {/* Archive Link */}
@@ -85,15 +85,37 @@ export default function CreativeGallery() {
             >
               {/* Image Placeholder */}
               <div className="relative aspect-[4/3] bg-gradient-to-br from-[var(--c-accent)]/10 to-[var(--c-accent2)]/10 overflow-hidden">
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <motion.div
-                    whileHover={{ scale: 1.1 }}
-                    transition={{ duration: 0.3 }}
-                    className="text-6xl opacity-50"
-                  >
-                    🎨
-                  </motion.div>
-                </div>
+                {item.image ? (
+                  <div className="absolute inset-0 bg-gradient-to-br from-[var(--c-accent)]/5 to-[var(--c-accent2)]/5 flex items-center justify-center">
+                    <motion.div
+                      whileHover={{ scale: 1.05 }}
+                      transition={{ duration: 0.3 }}
+                      className="text-5xl"
+                    >
+                      {item.category === 'Branding' && '🎨'}
+                      {item.category === 'Social Media' && '📱'}
+                      {item.category === 'Advertising' && '📢'}
+                      {item.category === 'Packaging' && '📦'}
+                      {item.category === 'Festival' && '🎉'}
+                      {item.category === 'Campaign' && '🚀'}
+                    </motion.div>
+                    <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4">
+                      <p className="text-white text-xs font-medium">
+                        {item.category} Portfolio
+                      </p>
+                    </div>
+                  </div>
+                ) : (
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <motion.div
+                      whileHover={{ scale: 1.1 }}
+                      transition={{ duration: 0.3 }}
+                      className="text-6xl opacity-50"
+                    >
+                      🎨
+                    </motion.div>
+                  </div>
+                )}
 
                 {/* Hover Overlay */}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end justify-center p-6">

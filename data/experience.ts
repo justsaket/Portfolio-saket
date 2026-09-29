@@ -55,6 +55,13 @@ export const experiences: Experience[] = [
 
 export const education: Experience[] = [
   {
+    role: "MBA in Digital Marketing",
+    company: "Deen Dayal Upadhyay Gorakhpur University",
+    period: "Completed",
+    description: "Master of Business Administration specializing in Digital Marketing, with focus on marketing strategy, consumer behavior, digital channels, and marketing analytics.",
+    type: "education"
+  },
+  {
     role: "B.Com (Bachelor of Commerce)",
     company: "Hemchand Yadav University",
     period: "Completed",
