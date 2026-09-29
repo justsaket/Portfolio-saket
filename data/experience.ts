@@ -11,10 +11,10 @@ export const experiences: Experience[] = [
   {
     role: "Social Media Executive",
     company: "Rungta International Skills University",
-    period: "2024 - Present",
+    period: "2024 - May 2025",
     description: "Led social media strategy, content creation, and digital presence management for university brand.",
     type: "work",
-    current: true
+    current: false
   },
   {
     role: "Co-Founder / Operations & Growth Lead",
