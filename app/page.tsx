@@ -4,7 +4,7 @@ import HeroRedesigned from '@/components/HeroRedesigned';
 import Positioning from '@/components/Positioning';
 import AboutRedesigned from '@/components/AboutRedesigned';
 import SkillsRedesigned from '@/components/SkillsRedesigned';
-import AnalyticsWorkspace from '@/components/AnalyticsWorkspace';
+import AnalyticsWorkspaceEnhanced from '@/components/AnalyticsWorkspaceEnhanced';
 import MarketingStrategy from '@/components/MarketingStrategy';
 import AutomationDiagrams from '@/components/AutomationDiagrams';
 import ExperienceRedesigned from '@/components/ExperienceRedesigned';
@@ -24,7 +24,7 @@ export default function Home() {
         <Positioning />
         <AboutRedesigned />
         <SkillsRedesigned />
-        <AnalyticsWorkspace />
+        <AnalyticsWorkspaceEnhanced />
         <MarketingStrategy />
         <AutomationDiagrams />
         <ProjectsRedesigned />

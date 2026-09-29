@@ -26,7 +26,7 @@ export default function AboutRedesigned() {
               >
                 About <span className="text-gradient">Saket</span>
               </motion.h2>
-              <div className="w-20 h-1 bg-gradient-to-r from-[var(--c-accent)] to-[var(--c-accent2)] rounded-full" />
+              <div className="w-20 h-1 bg-gradient-to-r from-[var(--c-accent)] to-[var(--c-accent-dark)] rounded-full" />
             </div>
 
             <div className="space-y-6 text-lg text-[var(--c-text)] leading-relaxed">

@@ -281,7 +281,7 @@ export default function ContactRedesigned() {
               <button
                 type="submit"
                 disabled={status === 'sending'}
-                className="w-full px-8 py-4 rounded-full bg-gradient-to-r from-[var(--c-accent)] to-[var(--c-accent2)] text-white font-semibold shadow-lg shadow-[var(--c-accent)]/25 hover:shadow-xl hover:shadow-[var(--c-accent)]/40 disabled:opacity-50 disabled:cursor-not-allowed transition-all flex items-center justify-center gap-2"
+                className="w-full px-8 py-4 rounded-full bg-gradient-to-r from-[var(--c-accent)] to-[var(--c-accent-dark)] text-white font-semibold shadow-lg shadow-[var(--c-accent)]/25 hover:shadow-xl hover:shadow-[var(--c-accent)]/40 disabled:opacity-50 disabled:cursor-not-allowed transition-all flex items-center justify-center gap-2"
               >
                 {status === 'sending' ? (
                   <>

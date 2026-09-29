@@ -97,7 +97,7 @@ export default function HeroRedesigned() {
             >
               <a
                 href="#work"
-                className="group px-8 py-4 rounded-full bg-gradient-to-r from-[var(--c-accent)] to-[var(--c-accent2)] text-black font-semibold shadow-lg shadow-[var(--c-accent)]/25 hover:shadow-xl hover:shadow-[var(--c-accent)]/40 transition-all flex items-center gap-2"
+                className="group px-8 py-4 rounded-full bg-gradient-to-r from-[var(--c-accent)] to-[var(--c-accent-dark)] text-black font-semibold shadow-lg shadow-[var(--c-accent)]/25 hover:shadow-xl hover:shadow-[var(--c-accent)]/40 transition-all flex items-center gap-2"
               >
                 View Work
                 <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -173,7 +173,7 @@ export default function HeroRedesigned() {
           >
             <div className="relative aspect-[3/4] max-w-md mx-auto lg:max-w-none">
               {/* Photo Frame with Gradient Border */}
-              <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-[var(--c-accent)] to-[var(--c-accent2)] p-[2px]">
+              <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-[var(--c-accent)] to-[var(--c-accent-dark)] p-[2px]">
                 <div className="w-full h-full rounded-3xl bg-[var(--c-bg)] overflow-hidden">
                   <Image
                     src="/saket-photo.jpg"

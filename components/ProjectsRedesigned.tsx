@@ -50,7 +50,7 @@ export default function ProjectsRedesigned() {
                 className="group glass-hover rounded-2xl overflow-hidden hover:shadow-2xl transition-all duration-500"
               >
                 {/* Project Preview */}
-                <div className="relative aspect-video bg-gradient-to-br from-[var(--c-accent)]/20 to-[var(--c-accent2)]/20 overflow-hidden">
+                <div className="relative aspect-video bg-gradient-to-br from-[var(--c-accent)]/20 to-[var(--c-accent-dark)]/20 overflow-hidden">
                   <div className="absolute inset-0 flex items-center justify-center">
                     <motion.div
                       whileHover={{ scale: 1.1 }}
