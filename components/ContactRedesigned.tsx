@@ -52,7 +52,8 @@ export default function ContactRedesigned() {
     } catch (error) {
       console.error('Form submission error:', error);
       setStatus('error');
-      setErrorMessage(error instanceof Error ? error.message : 'Failed to send message. Please try emailing directly.');
+      const msg = error instanceof Error ? error.message : 'Failed to send message.';
+      setErrorMessage(msg);
     }
   };
 
@@ -78,10 +79,10 @@ export default function ContactRedesigned() {
           transition={{ duration: 0.6 }}
           className="text-center mb-20"
         >
-          <h2 className="text-5xl md:text-7xl font-black text-[var(--c-strong)] mb-6">
+          <h2 className="text-5xl md:text-7xl font-black text-[var(--c-text-strong)] mb-6">
             Let's <span className="text-gradient">Connect</span>
           </h2>
-          <p className="text-xl text-[var(--c-muted)] max-w-2xl mx-auto">
+          <p className="text-xl text-[var(--c-text-muted)] max-w-2xl mx-auto">
             Open to opportunities in digital marketing, analytics, automation, and growth strategy. Let's build something great together.
           </p>
         </motion.div>
@@ -101,7 +102,7 @@ export default function ContactRedesigned() {
                 <div className="flex items-start gap-4">
                   <div className="text-3xl group-hover:scale-110 transition-transform">📧</div>
                   <div className="flex-1">
-                    <h3 className="font-bold text-[var(--c-strong)] mb-2">Email</h3>
+                    <h3 className="font-bold text-[var(--c-text-strong)] mb-2">Email</h3>
                     <a
                       href={`mailto:${profile.contact.email}`}
                       className="text-[var(--c-accent)] hover:underline break-all"
@@ -112,29 +113,33 @@ export default function ContactRedesigned() {
                 </div>
               </div>
 
-              {/* Phone */}
-              <div className="glass-hover rounded-2xl p-6 group hover:border-[var(--c-accent)] transition-all">
+              {/* Request a Call */}
+              <a
+                href={`mailto:${profile.contact.email}?subject=Request a Free Call&body=Hi Saket,%0D%0A%0D%0AI would like to schedule a free call with you.%0D%0A%0D%0AName: %0D%0ABest time to call: %0D%0A%0D%0AThank you!`}
+                className="glass-hover rounded-2xl p-6 group hover:border-[var(--c-accent)] transition-all block"
+              >
                 <div className="flex items-start gap-4">
-                  <div className="text-3xl group-hover:scale-110 transition-transform">📱</div>
+                  <div className="text-3xl group-hover:scale-110 transition-transform">📞</div>
                   <div className="flex-1">
-                    <h3 className="font-bold text-[var(--c-strong)] mb-2">Phone</h3>
-                    <a
-                      href={`tel:${profile.contact.phone}`}
-                      className="text-[var(--c-accent)] hover:underline"
-                    >
-                      {profile.contact.phone}
-                    </a>
+                    <h3 className="font-bold text-[var(--c-text-strong)] mb-2">Free Consultation</h3>
+                    <p className="text-[var(--c-text-muted)] text-sm mb-3">Let's discuss your goals and how I can help grow your business.</p>
+                    <span className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-gradient-to-r from-[var(--c-accent)] to-[var(--c-accent-dark)] text-white font-semibold text-sm shadow-lg shadow-[var(--c-accent)]/25 group-hover:shadow-xl group-hover:shadow-[var(--c-accent)]/40 transition-all">
+                      Request a Free Call
+                      <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                      </svg>
+                    </span>
                   </div>
                 </div>
-              </div>
+              </a>
 
               {/* Location */}
               <div className="glass-hover rounded-2xl p-6">
                 <div className="flex items-start gap-4">
                   <div className="text-3xl">📍</div>
                   <div className="flex-1">
-                    <h3 className="font-bold text-[var(--c-strong)] mb-2">Location</h3>
-                    <p className="text-[var(--c-muted)]">{profile.location}</p>
+                    <h3 className="font-bold text-[var(--c-text-strong)] mb-2">Location</h3>
+                    <p className="text-[var(--c-text-muted)]">{profile.location}</p>
                   </div>
                 </div>
               </div>
@@ -142,7 +147,7 @@ export default function ContactRedesigned() {
 
             {/* Social Links */}
             <div className="glass-hover rounded-2xl p-6">
-              <h3 className="font-bold text-[var(--c-strong)] mb-4">Connect Online</h3>
+              <h3 className="font-bold text-[var(--c-text-strong)] mb-4">Connect Online</h3>
               <div className="flex flex-wrap gap-3">
                 <a
                   href={profile.contact.linkedin}
@@ -319,13 +324,28 @@ export default function ContactRedesigned() {
               )}
 
               {status === 'error' && (
-                <motion.p
+                <motion.div
                   initial={{ opacity: 0, y: -10 }}
                   animate={{ opacity: 1, y: 0 }}
-                  className="text-sm text-center text-red-500"
+                  className="text-sm text-center space-y-3"
                 >
-                  {errorMessage || 'Something went wrong. Please try again or email directly.'}
-                </motion.p>
+                  {errorMessage.includes('not configured') || errorMessage.includes('service') ? (
+                    <div className="p-4 rounded-xl border border-[var(--c-accent)]/30 bg-[var(--c-accent)]/5">
+                      <p className="text-[var(--c-text-muted)] mb-3">Email service is currently unavailable. Reach out directly:</p>
+                      <a
+                        href="mailto:b4u.iamsaket@gmail.com"
+                        className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-gradient-to-r from-[var(--c-accent)] to-[var(--c-accent-dark)] text-white font-semibold shadow-lg shadow-[var(--c-accent)]/25 hover:shadow-xl hover:shadow-[var(--c-accent)]/40 transition-all"
+                      >
+                        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                        </svg>
+                        b4u.iamsaket@gmail.com
+                      </a>
+                    </div>
+                  ) : (
+                    <p className="text-red-500">{errorMessage || 'Something went wrong. Please try again or email directly.'}</p>
+                  )}
+                </motion.div>
               )}
             </form>
           </motion.div>
@@ -338,13 +358,13 @@ export default function ContactRedesigned() {
           transition={{ duration: 0.6, delay: 0.8 }}
           className="mt-20 text-center glass-hover rounded-3xl p-12"
         >
-          <p className="text-2xl md:text-3xl font-bold text-[var(--c-strong)] mb-4">
+          <p className="text-2xl md:text-3xl font-bold text-[var(--c-text-strong)] mb-4">
             {profile.name}
           </p>
           <p className="text-xl text-gradient font-semibold mb-2">
             {profile.title}
           </p>
-          <p className="text-[var(--c-muted)] italic max-w-3xl mx-auto">
+          <p className="text-[var(--c-text-muted)] italic max-w-3xl mx-auto">
             Where marketing strategy meets data intelligence, automation, and creative execution.
           </p>
         </motion.div>

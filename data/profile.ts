@@ -7,10 +7,11 @@ export const profile = {
 
   contact: {
     email: "b4u.iamsaket@gmail.com",
-    phone: "+91 7999733626",
     linkedin: "https://www.linkedin.com/in/visitsaket",
     github: "https://github.com/justsaket",
-    portfolio: "https://drive.google.com/drive/folders/158EhPqMiCwT8OOZFJHC-UC4k-ACSL-T6?usp=drive_link"
+    portfolio: "https://drive.google.com/drive/folders/158EhPqMiCwT8OOZFJHC-UC4k-ACSL-T6?usp=drive_link",
+    callSubject: "Request a Free Call",
+    callEmail: "b4u.iamsaket@gmail.com"
   },
 
   about: {

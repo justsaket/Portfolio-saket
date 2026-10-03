@@ -11,81 +11,68 @@ export const experiences: Experience[] = [
   {
     role: "Social Media Executive",
     company: "Rungta International Skills University",
-    period: "2024 - May 2025",
-    description: "Led social media strategy, content creation, and digital presence management for university brand.",
+    period: "Nov 2025 – Apr 2026",
+    description: "Led social media content planning and digital branding. Used design tools and AI platforms for content creation, workflow management, and team collaboration.",
     type: "work",
     current: false
   },
   {
     role: "Co-Founder / Operations & Growth Lead",
-    company: "Digital Finvest",
-    period: "2023 - 2024",
-    description: "Drove business operations, customer acquisition strategy, and growth systems for fintech startup. Built marketing automation workflows and managed financial product campaigns.",
-    type: "entrepreneurship"
-  },
-  {
-    role: "Co-Founder / Operations Lead",
-    company: "Taste Plaza",
-    period: "2022 - 2023",
-    description: "Built and scaled food delivery operations, marketing systems, and customer acquisition channels.",
-    type: "entrepreneurship"
-  },
-  {
-    role: "Co-Founder",
-    company: "Asketrulize",
-    period: "2022",
-    description: "Founded and operated digital services startup focusing on business growth solutions.",
-    type: "entrepreneurship"
+    company: "Digital Finvest | Taste Plaza | Asketrulize",
+    period: "Nov 2024 – Present",
+    description: "Managed online financial product services (insurance, mutual funds, SIPs, loans), built scalable lead generation systems, handled business operations, customer acquisition, and digital promotions across multiple ventures.",
+    type: "entrepreneurship",
+    current: true
   },
   {
     role: "Business Development Executive",
     company: "Chal Digital",
-    period: "2021 - 2022",
-    description: "Developed client relationships, executed digital marketing campaigns, and drove business growth through strategic partnerships.",
+    period: "Jul 2023 – Mar 2024",
+    description: "Executed affiliate and performance marketing campaigns to drive revenue growth. Expanded brand reach through influencer partnerships and generated qualified leads.",
     type: "work"
   },
   {
     role: "Network Marketing Associate",
     company: "Forever Living Products",
-    period: "2020 - 2021",
-    description: "Built customer networks, managed product marketing, and developed sales systems.",
+    period: "Jun 2022 – Apr 2023",
+    description: "Built and maintained a loyal client base, trained new associates in sales techniques, and strengthened customer relationship management skills.",
     type: "work"
   }
 ];
 
 export const education: Experience[] = [
   {
-    role: "MBA in Digital Marketing",
+    role: "MBA (Masters in Business Administration)",
     company: "Deen Dayal Upadhyay Gorakhpur University",
-    period: "Completed",
-    description: "Master of Business Administration specializing in Digital Marketing, with focus on marketing strategy, consumer behavior, digital channels, and marketing analytics.",
+    period: "2022 – 2024",
+    description: "Master of Business Administration with specialization in Digital Marketing — covering marketing strategy, consumer behavior, digital channels, and marketing analytics.",
     type: "education"
   },
   {
     role: "B.Com (Bachelor of Commerce)",
     company: "Hemchand Yadav University",
-    period: "Completed",
+    period: "Jun 2025",
     description: "Bachelor of Commerce with focus on business, finance, and accounting.",
     type: "education"
   },
   {
     role: "Diploma in Computer Applications",
     company: "ITCT",
-    period: "Completed",
+    period: "Jan 2025",
     description: "Comprehensive computer applications program covering programming, web development, and digital tools.",
     type: "education"
   },
   {
     role: "Higher Secondary Education (Class XII)",
-    company: "CBSE",
-    period: "Completed",
+    company: "CBSE Board",
+    period: "Jul 2022",
     description: "Higher secondary education with strong academic performance.",
     type: "education"
   },
   {
     role: "Secondary Education (Class X)",
-    company: "CBSE",
-    period: "Completed",
+    company: "CBSE Board",
+    period: "Jul 2020",
     description: "Secondary education with excellent results.",
     type: "education"
   }
