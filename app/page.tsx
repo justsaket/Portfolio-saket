@@ -12,13 +12,15 @@ import ProjectsRedesigned from '@/components/ProjectsRedesigned';
 import CreativeGalleryEnhanced from '@/components/CreativeGalleryEnhanced';
 import ContactRedesigned from '@/components/ContactRedesigned';
 import Footer from '@/components/Footer';
+import ParticleBackground from '@/components/ParticleBackground';
 
 export default function Home() {
   return (
     <>
+      <ParticleBackground />
       <IntroLoader />
       <NavigationAdvanced />
-      <main className="relative">
+      <main className="relative z-10">
         <HeroRedesigned />
         <Positioning />
         <AboutRedesigned />
