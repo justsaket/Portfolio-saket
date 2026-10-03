@@ -54,11 +54,11 @@ export default function Positioning() {
           className="text-center mb-20"
         >
           <motion.h2
-            className="text-5xl md:text-7xl font-black text-[var(--c-strong)] mb-6"
+            className="text-5xl md:text-7xl font-black text-[var(--c-text-strong)] mb-6"
           >
             Where <span className="text-gradient">Everything Connects</span>
           </motion.h2>
-          <p className="text-xl text-[var(--c-muted)] max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl text-[var(--c-text-muted)] max-w-3xl mx-auto leading-relaxed">
             I operate at the intersection of marketing, data, automation, and creative strategy—
             where growth meets intelligence.
           </p>
@@ -82,12 +82,12 @@ export default function Positioning() {
                 <div className="text-6xl mb-6">{domain.icon}</div>
 
                 {/* Title */}
-                <h3 className="text-2xl md:text-3xl font-bold text-[var(--c-strong)] mb-4 group-hover:text-[var(--c-accent)] transition-colors">
+                <h3 className="text-2xl md:text-3xl font-bold text-[var(--c-text-strong)] mb-4 group-hover:text-[var(--c-accent)] transition-colors">
                   {domain.title}
                 </h3>
 
                 {/* Description */}
-                <p className="text-[var(--c-muted)] leading-relaxed">
+                <p className="text-[var(--c-text-muted)] leading-relaxed">
                   {domain.description}
                 </p>
 
@@ -114,13 +114,13 @@ export default function Positioning() {
           initial={{ opacity: 0, scale: 0.9 }}
           animate={isInView ? { opacity: 1, scale: 1 } : {}}
           transition={{ duration: 0.8, delay: 0.8 }}
-          className="relative mt-20 p-12 rounded-3xl bg-gradient-to-br from-[var(--c-tile)] to-[var(--c-bg)] border border-[var(--c-border)]"
+          className="relative mt-20 p-12 rounded-3xl bg-gradient-to-br from-[var(--c-bg-card)] to-[var(--c-bg)] border border-[var(--c-border)]"
         >
           <div className="text-center max-w-3xl mx-auto">
-            <h3 className="text-3xl md:text-4xl font-bold text-[var(--c-strong)] mb-6">
+            <h3 className="text-3xl md:text-4xl font-bold text-[var(--c-text-strong)] mb-6">
               The Integration Advantage
             </h3>
-            <p className="text-lg text-[var(--c-muted)] leading-relaxed mb-8">
+            <p className="text-lg text-[var(--c-text-muted)] leading-relaxed mb-8">
               Most professionals specialize in one area. I bridge all four—creating marketing campaigns
               informed by data analytics, automated through AI workflows, and elevated by creative design.
               This integration turns insights into action and action into measurable growth.
@@ -131,15 +131,15 @@ export default function Positioning() {
               <span className="px-4 py-2 rounded-full bg-[var(--c-accent)]/10 text-[var(--c-accent)] border border-[var(--c-accent)]/20">
                 Data Insights
               </span>
-              <span className="text-[var(--c-muted)]">→</span>
+              <span className="text-[var(--c-text-muted)]">→</span>
               <span className="px-4 py-2 rounded-full bg-[var(--c-accent)]/10 text-[var(--c-accent)] border border-[var(--c-accent)]/20">
                 Marketing Strategy
               </span>
-              <span className="text-[var(--c-muted)]">→</span>
+              <span className="text-[var(--c-text-muted)]">→</span>
               <span className="px-4 py-2 rounded-full bg-[var(--c-accent)]/10 text-[var(--c-accent)] border border-[var(--c-accent)]/20">
                 Automated Execution
               </span>
-              <span className="text-[var(--c-muted)]">→</span>
+              <span className="text-[var(--c-text-muted)]">→</span>
               <span className="px-4 py-2 rounded-full bg-[var(--c-accent)]/10 text-[var(--c-accent)] border border-[var(--c-accent)]/20">
                 Creative Impact
               </span>

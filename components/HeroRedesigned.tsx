@@ -26,10 +26,10 @@ export default function HeroRedesigned() {
           transition={{ duration: 0.6 }}
           className="flex flex-wrap items-center gap-4 mb-8 md:mb-12"
         >
-          <span className="text-xs uppercase tracking-[0.3em] text-[var(--c-muted)] font-medium">
+          <span className="text-xs uppercase tracking-[0.3em] text-[var(--c-text-muted)] font-medium">
             {profile.location}
           </span>
-          <span className="h-1 w-1 rounded-full bg-[var(--c-muted)]" />
+          <span className="h-1 w-1 rounded-full bg-[var(--c-text-muted)]" />
           <span className="inline-flex items-center gap-2 text-xs px-3 py-1.5 rounded-full bg-[var(--c-accent)]/10 border border-[var(--c-accent)]/20 text-[var(--c-accent-light)]">
             <span className="w-2 h-2 rounded-full bg-[var(--c-accent)] animate-pulse" />
             {profile.availability}
@@ -46,7 +46,7 @@ export default function HeroRedesigned() {
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: 0.2, duration: 0.8 }}
               >
-                <h1 className="font-display text-6xl md:text-8xl lg:text-9xl font-black leading-[0.9] tracking-tight text-[var(--c-strong)]">
+                <h1 className="font-display text-6xl md:text-8xl lg:text-9xl font-black leading-[0.9] tracking-tight text-[var(--c-text-strong)]">
                   {profile.name.split(' ')[0]}
                   <br />
                   <span className="text-outline">{profile.name.split(' ')[1]}</span>
@@ -62,7 +62,7 @@ export default function HeroRedesigned() {
                 <h2 className="text-2xl md:text-4xl font-bold text-gradient">
                   {profile.title}
                 </h2>
-                <p className="text-lg md:text-xl text-[var(--c-muted)] leading-relaxed max-w-lg">
+                <p className="text-lg md:text-xl text-[var(--c-text-muted)] leading-relaxed max-w-lg">
                   {profile.tagline}
                 </p>
               </motion.div>
@@ -80,7 +80,7 @@ export default function HeroRedesigned() {
                     initial={{ opacity: 0, scale: 0.8 }}
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ delay: 0.7 + i * 0.1, duration: 0.4 }}
-                    className="px-4 py-2 text-sm rounded-full border border-[var(--c-border)] bg-[var(--c-tile)] text-[var(--c-text)] hover:border-[var(--c-accent)] hover:bg-[var(--c-accent)]/5 transition"
+                    className="px-4 py-2 text-sm rounded-full border border-[var(--c-border)] bg-[var(--c-bg-card)] text-[var(--c-text)] hover:border-[var(--c-accent)] hover:bg-[var(--c-accent)]/5 transition"
                   >
                     {skill}
                   </motion.span>
@@ -136,7 +136,7 @@ export default function HeroRedesigned() {
                 href={profile.contact.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-[var(--c-muted)] hover:text-[var(--c-accent)] transition"
+                className="text-[var(--c-text-muted)] hover:text-[var(--c-accent)] transition"
                 aria-label="LinkedIn"
               >
                 <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
@@ -147,7 +147,7 @@ export default function HeroRedesigned() {
                 href={profile.contact.github}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-[var(--c-muted)] hover:text-[var(--c-accent)] transition"
+                className="text-[var(--c-text-muted)] hover:text-[var(--c-accent)] transition"
                 aria-label="GitHub"
               >
                 <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
@@ -157,7 +157,7 @@ export default function HeroRedesigned() {
               <a
                 href="/Resume.pdf"
                 download
-                className="text-sm text-[var(--c-muted)] hover:text-[var(--c-accent)] transition underline"
+                className="text-sm text-[var(--c-text-muted)] hover:text-[var(--c-accent)] transition underline"
               >
                 Download Resume
               </a>
@@ -198,10 +198,10 @@ export default function HeroRedesigned() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 1.2, duration: 0.6 }}
-                className="absolute -bottom-6 -right-6 bg-[var(--c-tile)] border border-[var(--c-border)] rounded-2xl p-4 shadow-xl backdrop-blur-sm"
+                className="absolute -bottom-6 -right-6 bg-[var(--c-bg-card)] border border-[var(--c-border)] rounded-2xl p-4 shadow-xl backdrop-blur-sm"
               >
-                <p className="text-sm text-[var(--c-muted)]">Based in</p>
-                <p className="text-lg font-bold text-[var(--c-strong)]">Bhilai, India</p>
+                <p className="text-sm text-[var(--c-text-muted)]">Based in</p>
+                <p className="text-lg font-bold text-[var(--c-text-strong)]">Bhilai, India</p>
               </motion.div>
             </div>
           </motion.div>
@@ -216,7 +216,7 @@ export default function HeroRedesigned() {
         >
           <button
             onClick={() => document.getElementById('positioning')?.scrollIntoView({ behavior: 'smooth' })}
-            className="flex flex-col items-center gap-2 text-[var(--c-muted)] hover:text-[var(--c-accent)] transition"
+            className="flex flex-col items-center gap-2 text-[var(--c-text-muted)] hover:text-[var(--c-accent)] transition"
           >
             <span className="text-xs uppercase tracking-wider">Explore</span>
             <motion.svg

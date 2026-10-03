@@ -10,7 +10,6 @@ import AutomationDiagrams from '@/components/AutomationDiagrams';
 import ExperienceRedesigned from '@/components/ExperienceRedesigned';
 import ProjectsRedesigned from '@/components/ProjectsRedesigned';
 import CreativeGalleryEnhanced from '@/components/CreativeGalleryEnhanced';
-import CertificationsShowcase from '@/components/CertificationsShowcase';
 import ContactRedesigned from '@/components/ContactRedesigned';
 import Footer from '@/components/Footer';
 
@@ -30,7 +29,6 @@ export default function Home() {
         <ProjectsRedesigned />
         <CreativeGalleryEnhanced />
         <ExperienceRedesigned />
-        <CertificationsShowcase />
         <ContactRedesigned />
       </main>
       <Footer />

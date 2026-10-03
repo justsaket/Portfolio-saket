@@ -9,7 +9,7 @@ export default function ProjectsRedesigned() {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section id="work" ref={ref} className="relative py-32 px-6 bg-[var(--c-tile)]">
+    <section id="work" ref={ref} className="relative py-32 px-6 bg-[var(--c-bg-card)]">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <motion.div
@@ -18,10 +18,10 @@ export default function ProjectsRedesigned() {
           transition={{ duration: 0.6 }}
           className="text-center mb-20"
         >
-          <h2 className="text-5xl md:text-7xl font-black text-[var(--c-strong)] mb-6">
+          <h2 className="text-5xl md:text-7xl font-black text-[var(--c-text-strong)] mb-6">
             Featured <span className="text-gradient">Projects</span>
           </h2>
-          <p className="text-xl text-[var(--c-muted)] max-w-3xl mx-auto">
+          <p className="text-xl text-[var(--c-text-muted)] max-w-3xl mx-auto">
             A selection of web applications, automation systems, and analytics dashboards demonstrating technical execution and business impact.
           </p>
         </motion.div>
@@ -32,7 +32,7 @@ export default function ProjectsRedesigned() {
             initial={{ opacity: 0, x: -20 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-3xl font-bold text-[var(--c-strong)] mb-10 flex items-center gap-3"
+            className="text-3xl font-bold text-[var(--c-text-strong)] mb-10 flex items-center gap-3"
           >
             <span className="text-4xl">🌐</span> Web Applications
           </motion.h3>
@@ -73,10 +73,10 @@ export default function ProjectsRedesigned() {
                 {/* Content */}
                 <div className="p-6 space-y-4">
                   <div>
-                    <h4 className="text-xl font-bold text-[var(--c-strong)] group-hover:text-[var(--c-accent)] transition mb-2">
+                    <h4 className="text-xl font-bold text-[var(--c-text-strong)] group-hover:text-[var(--c-accent)] transition mb-2">
                       {project.title}
                     </h4>
-                    <p className="text-sm text-[var(--c-muted)] leading-relaxed">
+                    <p className="text-sm text-[var(--c-text-muted)] leading-relaxed">
                       {project.description}
                     </p>
                   </div>
@@ -113,10 +113,10 @@ export default function ProjectsRedesigned() {
           transition={{ duration: 0.6, delay: 0.8 }}
           className="glass-hover rounded-3xl p-8 md:p-12 text-center"
         >
-          <h3 className="text-2xl md:text-3xl font-bold text-[var(--c-strong)] mb-4">
+          <h3 className="text-2xl md:text-3xl font-bold text-[var(--c-text-strong)] mb-4">
             View All Work
           </h3>
-          <p className="text-[var(--c-muted)] mb-6 max-w-2xl mx-auto">
+          <p className="text-[var(--c-text-muted)] mb-6 max-w-2xl mx-auto">
             Explore the complete portfolio including analytics dashboards, automation systems, and creative projects.
           </p>
           <div className="flex flex-wrap justify-center gap-4">

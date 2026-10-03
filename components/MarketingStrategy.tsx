@@ -90,7 +90,7 @@ export default function MarketingStrategy() {
           <motion.span className="inline-block text-sm uppercase tracking-[0.3em] text-[var(--c-accent)] font-semibold mb-4">
             Digital Marketing & Growth
           </motion.span>
-          <h2 className="text-5xl md:text-7xl font-black text-[var(--c-strong)] mb-6">
+          <h2 className="text-5xl md:text-7xl font-black text-[var(--c-text-strong)] mb-6">
             Growth
             <span className="text-gradient-red"> Strategy</span>
           </h2>
@@ -114,7 +114,7 @@ export default function MarketingStrategy() {
               <div className="text-5xl mb-4">{strategy.icon}</div>
 
               {/* Title */}
-              <h3 className="text-2xl font-bold text-[var(--c-strong)] mb-2">{strategy.title}</h3>
+              <h3 className="text-2xl font-bold text-[var(--c-text-strong)] mb-2">{strategy.title}</h3>
               <p className="text-[var(--c-text-muted)] mb-6">{strategy.description}</p>
 
               {/* Capabilities */}
@@ -143,7 +143,7 @@ export default function MarketingStrategy() {
           viewport={{ once: true }}
           className="p-8 md:p-12 rounded-3xl bg-gradient-to-br from-[var(--c-bg-card)] to-[var(--c-surface)] border border-[var(--c-border)]"
         >
-          <h3 className="text-3xl font-black text-[var(--c-strong)] mb-8 text-center">Featured Campaigns</h3>
+          <h3 className="text-3xl font-black text-[var(--c-text-strong)] mb-8 text-center">Featured Campaigns</h3>
 
           <div className="grid md:grid-cols-3 gap-6">
             {campaigns.map((campaign, index) => (
@@ -156,7 +156,7 @@ export default function MarketingStrategy() {
                 className="p-6 rounded-xl bg-[var(--c-bg)] border border-[var(--c-border)]"
               >
                 <div className="text-sm text-[var(--c-accent)] font-semibold mb-2">{campaign.client}</div>
-                <h4 className="text-xl font-bold text-[var(--c-strong)] mb-3">{campaign.title}</h4>
+                <h4 className="text-xl font-bold text-[var(--c-text-strong)] mb-3">{campaign.title}</h4>
                 <p className="text-[var(--c-text-muted)] mb-4">{campaign.result}</p>
 
                 <div className="flex flex-wrap gap-2">
@@ -178,7 +178,7 @@ export default function MarketingStrategy() {
           viewport={{ once: true }}
           className="mt-16"
         >
-          <h3 className="text-3xl font-black text-[var(--c-strong)] mb-8 text-center">Customer Journey Optimization</h3>
+          <h3 className="text-3xl font-black text-[var(--c-text-strong)] mb-8 text-center">Customer Journey Optimization</h3>
 
           <div className="grid md:grid-cols-4 gap-4">
             {['Awareness', 'Consideration', 'Conversion', 'Retention'].map((stage, index) => (
@@ -193,7 +193,7 @@ export default function MarketingStrategy() {
                 <div className="w-12 h-12 mx-auto mb-4 rounded-full bg-gradient-to-br from-[var(--c-accent)] to-[var(--c-accent-dark)] flex items-center justify-center text-white font-black">
                   {index + 1}
                 </div>
-                <h4 className="font-bold text-lg text-[var(--c-strong)]">{stage}</h4>
+                <h4 className="font-bold text-lg text-[var(--c-text-strong)]">{stage}</h4>
 
                 {/* Connection Arrow */}
                 {index < 3 && (
