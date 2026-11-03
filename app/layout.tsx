@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Space_Grotesk, Inter } from "next/font/google";
+import { SpeedInsights } from '@vercel/speed-insights/next';
 import "./globals.css";
 import CustomCursor from "@/components/CustomCursor";
 
@@ -97,6 +98,7 @@ export default function RootLayout({
       <body className={`${spaceGrotesk.variable} ${inter.variable} font-body antialiased`}>
         <CustomCursor />
         {children}
+        <SpeedInsights />
       </body>
     </html>
   );
