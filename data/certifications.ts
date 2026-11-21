@@ -90,7 +90,12 @@ export const certifications: Certification[] = [
     category: "Design",
   }
 ];
-
+  {
+    title: "NASA Space Apps Challange",
+    issuer: "Professional Certification",
+    category: "Design",
+  }
+];
 export const certificationsByCategory = {
   marketing: certifications.filter(c => c.category === "Marketing"),
   analytics: certifications.filter(c => c.category === "Analytics"),
